@@ -9,6 +9,7 @@
 <body>
 	<header>
 		<div class="col-xs-3">
+			<%= link_to root_path, :class => 'logo' do %>
 			<div class="circle">
   				<br />
   				HIP
@@ -17,19 +18,34 @@
   				<br />
   				LINERS
 				</div>
+				<% end %>
 		</div>
 		<div class="col-xs-4 slogan">
 			Splurting out random lines from Hip-Hop's greatest minds
 		</div>
 		<div class="col-xs-5 links">
-			<%= link_to 'Contribute', '#' %>
+			<%= link_to 'Contribute', new_quote_path %>
 			<%= link_to 'About', '#' %>
 		</div>
 	</header>
 	<hr />
 	<br class="clear" />
 
+	<div class="container">
 <%= yield %>
+	</div>
+
+	<div class="footer">
+		<div class="container">
+			<div class="col-xs-6">
+				<%= link_to "This isn't enough, I need more", root_path, :class => 'next-quote' %>
+			</div>
+			<div class="col-xs-6 footer-blurb">
+				Proudly hacked in the Bay Area, CA by<a href="http://thefirehoseproject.com">Justin Rook Dizon</a><br />
+				Want to build your own Splurty Web App - <a href="http://thefirehoseproject.com">Learn how to code here</a>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>
