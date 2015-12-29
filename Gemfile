@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#Added this gem for testing
+gem "factory_girl_rails", "~> 4.0"
+
 # Added this gem for Twitter Bootstrap 3
 gem 'bootstrap-sass', '~> 3.3.4'
 
@@ -48,3 +51,5 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+
